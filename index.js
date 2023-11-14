@@ -16,11 +16,11 @@ app.get('/:sentence', (req, res) => {
   exec(pythonCommand, (error, stdout, stderr) => {
     if (error) {
       console.error(`Fehler beim Ausführen des Python-Skripts: ${error.message}`);
-      return res.status(500).send('Interner Serverfehler');
+      return res.status(500).send('Interner Serverfehler1');
     }
     if (stderr) {
       console.error(`Fehlerausgabe des Python-Skripts: ${stderr}`);
-      return res.status(500).send('Interner Serverfehler');
+      return res.status(500).send('Interner Serverfehler2');
     }
 
     try {
@@ -28,7 +28,7 @@ app.get('/:sentence', (req, res) => {
       res.json(result);
     } catch (e) {
       console.error(`Fehler beim Parsen des JSON-Objekts: ${e}`);
-      return res.status(500).send('Interner Serverfehler');
+      return res.status(500).send('Interner Serverfehler3');
     }
   });
 });
