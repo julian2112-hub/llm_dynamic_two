@@ -9,7 +9,7 @@ process.env.PIPENV_VERBOSITY = '-1';  // Unterdrückt Warnungen
 
 app.get('/:sentence', (req, res) => {
   const encodedSentence = encodeURI(req.params.sentence);
-  // const pythonCommand = `python query.py "${encodedSentence}"`;
+  const pythonCommand = `python query.py "${encodedSentence}"`;
   //const pythonCommand = `source /venv/Scripts/activate && query.py "${encodedSentence}"`;
   //const pythonCommand = `pipenv run python query.py "${encodedSentence}"`;
 
