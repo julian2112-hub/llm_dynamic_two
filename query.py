@@ -1,5 +1,6 @@
 #from aleph_alpha_client import Client
 import sys
+import json
 
 
 
@@ -10,4 +11,9 @@ if __name__ == "__main__":
 
     #sentence = sys.argv[1]
 
-    print("Hello worldd")
+    data = {
+        "question": "Hello World"
+    }
+
+    json_data = json.dumps(data)
+    print(json_data)
