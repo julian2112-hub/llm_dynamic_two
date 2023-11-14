@@ -1,0 +1,4 @@
+steps:
+- script: |
+    pip install -r requirements.txt
+  displayName: 'Install Python libraries'
